@@ -11,7 +11,7 @@ export class AppComponent {
     {
       instanceType: 'medium',
       name: 'Production Server',
-      status: 'stable',
+      status: 'critical',
       started: new Date(15, 1, 2017)
     },
     {
@@ -34,11 +34,20 @@ export class AppComponent {
     }
   ];
 
-  getStatusClasses(server: {instanceType: string, name: string, status: string, started: Date}) {
+  getListGroupItemStatus(server: {instanceType: string, name: string, status: string, started: Date}) {
     return {
       'list-group-item-success': server.status === 'stable',
       'list-group-item-warning': server.status === 'offline',
       'list-group-item-danger': server.status === 'critical'
     };
   }
+
+  getBadgeStatus(server: {instanceType: string, name: string, status: string, started: Date}) {
+    return {
+      'badge-success': server.status === 'stable',
+      'badge-warning': server.status === 'offline',
+      'badge-danger': server.status === 'critical'
+    };
+  }
+
 }
