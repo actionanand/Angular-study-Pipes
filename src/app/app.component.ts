@@ -12,13 +12,13 @@ export class AppComponent {
       instanceType: 'medium',
       name: 'Production Server',
       status: 'critical',
-      started: new Date(15, 1, 2017)
+      started: new Date(13, 1, 2019)
     },
     {
       instanceType: 'large',
       name: 'User Database',
       status: 'stable',
-      started: new Date(15, 1, 2017)
+      started: new Date(21, 8, 2018)
     },
     {
       instanceType: 'small',
@@ -30,7 +30,7 @@ export class AppComponent {
       instanceType: 'small',
       name: 'Testing Environment Server',
       status: 'stable',
-      started: new Date(15, 1, 2017)
+      started: new Date(9, 3, 2017)
     }
   ];
 
