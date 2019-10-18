@@ -10,7 +10,7 @@ export class AppComponent {
   servers = [
     {
       instanceType: 'medium',
-      name: 'Production',
+      name: 'Production Server',
       status: 'critical',
       started: new Date(13, 1, 2019)
     },
@@ -33,6 +33,19 @@ export class AppComponent {
       started: new Date(9, 3, 2017)
     }
   ];
+
+  filteredString ='';
+  testServerCount:number = 1;
+
+  onAddNewServer(){
+    this.servers.push({
+      instanceType: 'small',
+      name: 'Test Server '+ this.testServerCount,
+      status: 'offline',
+      started: new Date(13, 11, 2013)
+    });
+    this.testServerCount++;
+  }
 
   getListGroupItemStatus(server: {instanceType: string, name: string, status: string, started: Date}) {
     return {
