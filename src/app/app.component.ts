@@ -10,7 +10,7 @@ export class AppComponent {
   servers = [
     {
       instanceType: 'medium',
-      name: 'Production Server',
+      name: 'Production',
       status: 'critical',
       started: new Date(13, 1, 2019)
     },

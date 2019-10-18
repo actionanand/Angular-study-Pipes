@@ -11,7 +11,7 @@
             [ngClass]="getBadgeStatus(server)">
             {{ server.status }}
           </span> &nbsp;
-          <strong>{{ server.name }}</strong> | 
+          <strong>{{ server.name | shortenPipe }}</strong> | 
           {{ server.instanceType | uppercase }} | {{ server.started | date: 'fullDate' }}
         </li>
       </ul>
